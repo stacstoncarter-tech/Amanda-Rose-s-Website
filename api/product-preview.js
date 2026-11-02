@@ -1,4 +1,4 @@
-const allowed=['amazon.com','amzn.to','fashionnova.com','target.com','ulta.com','sephora.com','walmart.com','aerie.com','ae.com'];
+const allowed=['amazon.com','amzn.to','fashionnova.com','target.com','ulta.com','sephora.com','walmart.com','aerie.com','ae.com','halara.com'];
 function permitted(host){return allowed.some(d=>host===d||host.endsWith('.'+d))}
 function attrs(tag){const result={};for(const m of tag.matchAll(/([\w:-]+)\s*=\s*(["'])(.*?)\2/g))result[m[1].toLowerCase()]=m[3];return result}
 function decode(s){return String(s||'').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')}
