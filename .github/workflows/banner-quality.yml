@@ -1,0 +1,45 @@
+name: Banner quality gates
+on:
+  pull_request:
+    paths:
+      - 'rose-banner-*.js'
+      - 'rose-banner-*.css'
+      - 'banner-studio.html'
+      - 'index.html'
+      - 'AGENTS.md'
+      - 'BANNER_SYSTEM_SPEC.md'
+      - 'IMPLEMENTATION_STATUS.md'
+      - 'tests/**'
+      - '.github/workflows/banner-quality.yml'
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  architecture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify shared renderer architecture
+        run: node --test tests/banner-architecture.test.mjs
+      - name: Report gate
+        if: failure()
+        run: echo "::error::Banner architecture gate failed. Do not mark banner system fixed or merge until shared renderer and visual regression tests pass."
+  visual-regression:
+    needs: architecture
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser testing dependencies
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Compare homepage and studio pixels
+        run: |
+          node tests/banner-visual.test.mjs
+          node tests/banner-pages.test.mjs
