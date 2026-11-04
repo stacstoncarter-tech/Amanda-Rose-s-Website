@@ -18,4 +18,4 @@
 .rose-banner .rose-slide .rose-design-canvas>p{width:90%!important;max-width:90%!important;white-space:normal!important}
 .rose-banner .rose-slide .rose-design-canvas>.eyebrow{width:max-content!important;max-width:92%!important}
 .rose-banner .rose-slide .rose-design-canvas>div:not(.eyebrow){width:max-content!important;max-width:92%!important}
-.rose-banner .rose-slide .rose-design-canvas .btn{font-size:inherit!important;max-width:none!important}
+.rose-banner .rose-slide .rose-design-canvas .btn{max-width:none!important}
