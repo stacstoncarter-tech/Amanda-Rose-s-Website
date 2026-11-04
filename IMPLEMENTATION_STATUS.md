@@ -37,3 +37,9 @@ The branch now uses one shared renderer for both surfaces. Remaining blockers: b
 
 ## How to update this ledger
 For each change record commit SHA, tested commands, PASS/FAIL, screenshots or artifact links, deployed URL/state, and unresolved defects. Do not replace FAIL with PASS merely because a deployment succeeded.
+
+## User acceptance — 2026-11-04
+- User reports: “banners work well i tested.” Marked USER-ACCEPTED on preview; scope of manual checks unspecified.
+- GitHub Actions run 41871240554: architecture, visual regression and HTML smoke workflow SUCCESS.
+- Database save/read-back not independently verified by automated authenticated integration test.
+- Production deployment remains unmodified pending explicit release decision.
