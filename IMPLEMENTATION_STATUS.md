@@ -12,7 +12,7 @@ Updated: 2026-11-04. This ledger is the source of truth; a Vercel READY status i
 | Compact neutral controls below artwork | IMPLEMENTED IN CSS | NOT VERIFIED | Previous patches deployed | NO |
 | Automated visual regression | NOT IMPLEMENTED | NOT RUN | NO | NO |
 | Repo rules, specification, status ledger | YES | File existence confirmed | Documentation branch only | N/A |
-| Architecture CI gate | YES | Pending GitHub Actions execution | Development branch only | N/A |
+| Architecture CI gate | YES | PASS on commit c3fcede; expanded visual suite pending | Development branch only | N/A |
 
 ## Open blocker
 The branch now uses one shared renderer for both surfaces. Remaining blockers: browser pixel comparison has not been run; production Supabase save/read-back has not been verified; mobile and desktop screenshots have not been reviewed.
@@ -28,7 +28,9 @@ The branch now uses one shared renderer for both surfaces. Remaining blockers: b
 - 2026-11-04: Safeguards established on `safeguards/banner-quality-gates`; CI architecture test intentionally rejects the current two-renderer implementation.
 - Development branch: shared renderer implemented and both pages wired to it; legacy comparison stylesheet removed from both pages.
 - JavaScript syntax checks executed for renderer, editor, and homepage: PASS.
-- Browser visual regression and real database persistence: NOT RUN / NOT VERIFIED.
+- GitHub Actions run 41867703247: architecture PASS and initial browser pixel-comparison PASS on commit c3fcede.
+- Expanded browser test: 15 scenarios × 3 widths, committed as 97ca4ad; result PENDING.
+- Live-site visual parity and real database persistence: NOT RUN / NOT VERIFIED.
 - No production changes, no database writes, no visual verification claimed.
 
 ## How to update this ledger
