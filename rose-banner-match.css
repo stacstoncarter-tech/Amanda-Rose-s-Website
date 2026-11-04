@@ -6,3 +6,16 @@
 .rose-banner .rose-design-canvas{width:1600px!important;height:582px!important;position:absolute!important;left:0!important;top:0!important;transform-origin:top left!important;background-size:cover!important;background-position:center!important}
 .rose-banner .rose-design-canvas>.eyebrow,.rose-banner .rose-design-canvas>h1,.rose-banner .rose-design-canvas>h2,.rose-banner .rose-design-canvas>p,.rose-banner .rose-design-canvas>div{position:absolute!important;margin:0!important;line-height:1.08!important}
 .rose-banner .rose-design-canvas .btn,.preview-viewport .preview .placed[data-kind="button"] a{display:inline-block!important;padding:12px 20px!important;border-radius:40px!important;white-space:nowrap!important}
+
+/* Lock live elements to the studio's fixed-canvas geometry, irrespective of legacy hero rules. */
+.rose-banner .rose-slide .rose-design-canvas>.eyebrow,
+.rose-banner .rose-slide .rose-design-canvas>h1,
+.rose-banner .rose-slide .rose-design-canvas>h2,
+.rose-banner .rose-slide .rose-design-canvas>p,
+.rose-banner .rose-slide .rose-design-canvas>div:not(.eyebrow){display:block!important;min-width:0!important;max-height:none!important;grid-area:auto!important;align-self:auto!important;justify-self:auto!important}
+.rose-banner .rose-slide .rose-design-canvas>h1,
+.rose-banner .rose-slide .rose-design-canvas>h2{width:90%!important;max-width:90%!important;white-space:normal!important;overflow-wrap:normal!important}
+.rose-banner .rose-slide .rose-design-canvas>p{width:90%!important;max-width:90%!important;white-space:normal!important}
+.rose-banner .rose-slide .rose-design-canvas>.eyebrow{width:max-content!important;max-width:92%!important}
+.rose-banner .rose-slide .rose-design-canvas>div:not(.eyebrow){width:max-content!important;max-width:92%!important}
+.rose-banner .rose-slide .rose-design-canvas .btn{font-size:inherit!important;max-width:none!important}
