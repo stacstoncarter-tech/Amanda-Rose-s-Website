@@ -8,8 +8,12 @@ h1,h2,h3,.hero h1,.hero h2,.hero-title,.section-title,main>h1,main>h2{
   font-style:normal!important;font-weight:600!important;letter-spacing:-.045em;
   color:#080808!important;text-shadow:none!important;
 }
-.hero,.hero-section,.page-hero{background:#fff!important;background-image:none!important;color:#171717!important}
-.hero p,.hero .eyebrow,.hero>div{color:#171717!important;text-shadow:none!important}
+.hero:not(.rose-slide),.hero-section:not(.rose-slide),.page-hero:not(.rose-slide){background:#fff!important;background-image:none!important;color:#171717!important}
+/* Rotating banners retain their uploaded background imagery and original overlay styling. */
+.rose-banner .rose-slide{background-size:cover!important;background-position:center!important}
+.rose-banner .rose-slide h1,.rose-banner .rose-slide h2{color:#fff!important}
+.rose-banner .rose-slide p,.rose-banner .rose-slide .eyebrow{color:#fff!important}
+.hero:not(.rose-slide) p,.hero:not(.rose-slide) .eyebrow,.hero:not(.rose-slide)>div{color:#171717!important;text-shadow:none!important}
 main,section:not(.panel),.content,.page-content{background-color:transparent}
 .rose-global-header{background:#fff!important;color:#171717!important}
 .rose-global-header nav a{color:#171717!important}
