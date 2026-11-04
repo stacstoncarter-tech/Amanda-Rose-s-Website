@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFileSync, existsSync} from 'node:fs';
+const read = p => readFileSync(new URL('../'+p, import.meta.url),'utf8');
+const required=['AGENTS.md','BANNER_SYSTEM_SPEC.md','IMPLEMENTATION_STATUS.md','rose-banner-renderer.js'];
+for(const p of required) assert.ok(existsSync(new URL('../'+p,import.meta.url)), 'Missing required file: '+p);
+const publicCode=read('rose-banner-public.js');
+const studioCode=read('rose-banner-admin.js');
+const shared='rose-banner-renderer.js';
+assert.ok(publicCode.includes(shared), 'Homepage must import the shared renderer');
+assert.ok(studioCode.includes(shared), 'Studio must import the same shared renderer');
+assert.ok(read('index.html').includes(shared) || publicCode.includes(shared), 'Homepage must load shared renderer');
+assert.ok(read('banner-studio.html').includes(shared) || studioCode.includes(shared), 'Studio must load shared renderer');
+assert.ok(!/function\s+styleText\s*\(/.test(publicCode), 'Remove independent public text styling');
+assert.ok(!/function\s+decorate\s*\(/.test(studioCode), 'Remove independent studio text styling');
+console.log('PASS: both banner surfaces use a single renderer (structural gate).');
