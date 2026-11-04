@@ -40,4 +40,6 @@ jobs:
           npm install --no-save playwright
           npx playwright install --with-deps chromium
       - name: Compare homepage and studio pixels
-        run: node tests/banner-visual.test.mjs
+        run: |
+          node tests/banner-visual.test.mjs
+          node tests/banner-pages.test.mjs
