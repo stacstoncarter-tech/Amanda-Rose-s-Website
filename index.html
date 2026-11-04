@@ -47,6 +47,13 @@
 .shopfirst .featured-deal .latest-art img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center 35%!important;padding:0!important;transform:none!important}
 .shopfirst .featured-deal .latest-art::before,.shopfirst .featured-deal .latest-art::after{display:none!important}
 @media(max-width:720px){.shopfirst .shopfirst-logo{width:235px;height:145px;top:-78px}.shopfirst .shopfirst-logo .shopfirst-flower{width:145px;height:145px}.shopfirst .featured-deal .latest-art{height:235px!important}}
+
+/* Editorial shopping logo alignment: keep frame from crossing the wordmark. */
+.shopfirst{margin-top:120px!important;padding-top:112px!important}
+.shopfirst .shopfirst-logo{top:-100px!important;width:min(310px,55vw)!important;height:190px!important;background:linear-gradient(to bottom,#fff 0%,#fff 54%,transparent 54%);}
+.shopfirst .shopfirst-logo .shopfirst-wordmark{width:100%!important;height:100%!important;object-fit:contain!important}
+.shopfirst .shopfirst-logo .shopfirst-flower{width:180px!important;height:180px!important}
+@media(max-width:720px){.shopfirst{margin-top:100px!important;padding-top:95px!important}.shopfirst .shopfirst-logo{top:-85px!important;height:155px!important;width:min(240px,70vw)!important}.shopfirst .shopfirst-logo .shopfirst-flower{width:145px!important;height:145px!important}}
 </style><link rel="stylesheet" href="rose-editorial-theme.css?v=20261104-2"><style>
 /* Keep carousel controls outside artwork at all viewport widths. */
 .rose-banner{display:flex!important;flex-direction:column!important;overflow:visible!important}
