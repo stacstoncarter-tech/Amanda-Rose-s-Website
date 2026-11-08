@@ -39,3 +39,13 @@ The user approved public release of the shopping highlights and circular photogr
 - Limitations: collections/series without curated published content remain empty. Precise category, collection, deal, and featured-content relationships are versioned in shopping-curation.json; new admin classification controls are not included. No full authenticated admin or banner-persistence regression claimed; those modules are unchanged.
 - DEPLOYED: pending preview verification and release. Rollback production remains dpl_9HFaD3M64pcaAdbRSwXz6NqhQA1R.
 - Additional responsive QA PASS: 390px embedded mobile viewports for shopping, product, Fashion content, and Activewear category; 800px tablet shopping viewport. All main containers have scrollWidth equal to clientWidth; mobile grid is one column, tablet two columns. Shared content renderer retested after extraction (Fashion: 2 cards).
+
+## Architecture release evidence
+- GitHub PR #3 merged after Site map quality checks run 42522532727 passed. Implementation commit b4e6206e6120024fce1cf69e95b9fd56dbd3cf2f; merge commit 758aa5d5c97efce9e123b6e990f9a873f8bf5395; merged tree dda84c4f26866c71364700046fa2a294e325cbf1 exactly matches tested preview.
+- Preview dpl_AuaYF1vytAo7DGhARC3vidhhzQMK READY, authenticated fetch HTTP 200. Browser verified 8 products, Aerie brand filter (2), sorting, and Beekeepers Naturals code copy confirmation.
+- Production dpl_3Apwg6JqKR4jmTcK9VVYtGPwFnP6 READY, canonical https://amanda-rose-website.vercel.app/ assigned successfully. Public browser verified shopping (8), sitemap category links, and navigation to Activewear (2).
+- Production HTTP verification PASS: 28 public routes/assets return 200; shared shopping/content scripts, taxonomy, and curation match released source bytes.
+- IMPLEMENTED / TESTED / DEPLOYED / VISUALLY VERIFIED for the approved architecture scope. Full admin, external video-provider playback, and pre-existing banner save/read-back behavior were not retested. No background monitoring configured by this change.
+- Files: shopping hub and shared shopping renderer/taxonomy/curation; content hubs and shared content renderer; Explore/community/sitemap; homepage and gateway destinations; code-offer detail links; AGENTS.md, SITE_ARCHITECTURE.md, status ledger, and CI/static checker.
+- Remaining content work: populate empty editorial/series sections and curate explicit product/video and seasonal/gift-guide collections as material is published.
+- Rollback target: dpl_9HFaD3M64pcaAdbRSwXz6NqhQA1R.
