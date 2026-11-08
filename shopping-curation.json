@@ -1,0 +1,65 @@
+{
+  "products": {
+    "3270fd21-b412-465b-a543-f9b2545cd40e": {
+      "brand": "Aerie",
+      "department": "fashion",
+      "shopping_category": "clothing",
+      "subcategory": "Activewear"
+    },
+    "2d6768b5-50ad-47d6-99f5-692b9b99533f": {
+      "brand": "Fashion Nova",
+      "department": "fashion",
+      "shopping_category": "clothing",
+      "subcategory": "Dresses"
+    },
+    "4010be9b-2a90-4403-a6ff-15a95c6e64c2": {
+      "brand": "Amazon",
+      "department": "fashion",
+      "shopping_category": "clothing",
+      "subcategory": "Tops"
+    },
+    "8a223993-ef81-450f-8491-6347c378a369": {
+      "brand": "Halara",
+      "department": "fashion",
+      "shopping_category": "clothing",
+      "subcategory": "Activewear"
+    },
+    "a356c666-c827-453c-baa4-f3b7a36a99ed": {
+      "brand": "Fashion Nova",
+      "department": "fashion",
+      "shopping_category": "clothing",
+      "subcategory": "Outerwear"
+    },
+    "fd846dc5-7894-445e-974e-815f26ca29c2": {
+      "brand": "Fashion Nova",
+      "department": "fashion",
+      "shopping_category": "clothing",
+      "subcategory": "Outerwear"
+    },
+    "98219731-781e-41a7-9926-a44012d71bd6": {
+      "brand": "Aerie",
+      "department": "fashion",
+      "shopping_category": "intimates-lounge",
+      "subcategory": "Bras"
+    },
+    "b2af4f27-2260-4e76-a0db-5201e4609c54": {
+      "brand": "Fashion Nova",
+      "department": "fashion",
+      "shopping_category": "clothing",
+      "subcategory": "Outerwear"
+    },
+    "e26d6843-6546-4e2b-b659-ceffc0d12f4e": {
+      "brand": "Beekeepers Naturals"
+    },
+    "207b4b36-441f-495c-8967-62361bdd216d": {
+      "brand": "Wild"
+    },
+    "f042920c-9333-4388-9621-192b9e41ecb2": {
+      "brand": "Kitsch"
+    },
+    "eeb9d0f8-4bc2-4133-8138-289366acd22f": {
+      "brand": "Cured Nutrition"
+    }
+  },
+  "content": {}
+}
