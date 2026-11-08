@@ -28,3 +28,10 @@ These instructions apply to every contributor or coding agent working in this re
 
 ## Completion report
 Report: files changed, commit, tests executed and results, deployment target/state, known defects, and next step. Never claim background monitoring or testing that has not been set up.
+
+## Mandatory public site architecture (approved 2026-11-08)
+- Read and follow SITE_ARCHITECTURE.md before creating or changing any public page.
+- The approved sitemap is binding for all future pages: homepage → named content/community hubs and Shop & Save → departments/categories/subcategories, brands, deals, collections → one canonical product page per existing product ID → retailer.
+- Use rose-site-map.js as the taxonomy and rose-shopping.js as the shared catalog renderer. Keep public sitemap.html and parent navigation current.
+- Content and shopping must connect through relevant category links and, when verified, explicit featured-product relationships. Never imply an unverified product endorsement.
+- Preserve the approved homepage header/banner design and existing data, artwork, admin tools, authentication, and scheduling.
